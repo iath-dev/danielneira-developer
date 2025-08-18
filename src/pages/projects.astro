@@ -1,0 +1,30 @@
+---
+// src/pages/projects.astro
+import Layout from '@/layouts/Layout.astro';
+import { fetchContent } from '@/services/data';
+
+const projects = await fetchContent.projects();
+---
+
+<Layout title="Mis Proyectos">
+  <h1>Proyectos Destacados</h1>
+
+  <div class="projects-grid">
+    {
+      projects
+        .filter((p) => p.featured)
+        .map((project) => (
+          <article class="project-card">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <ul>
+              {project.technologies.map((tech) => (
+                <li>{tech}</li>
+              ))}
+            </ul>
+            <a href={`/projects/${project.slug}`}>Ver detalles</a>
+          </article>
+        ))
+    }
+  </div>
+</Layout>

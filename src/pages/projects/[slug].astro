@@ -1,0 +1,29 @@
+---
+// src/pages/projects/[slug].astro
+import Layout from '@/layouts/Layout.astro';
+import { fetchContent } from '@/services/data';
+
+const { slug } = Astro.params;
+const projects = await fetchContent.projects();
+const project = projects.find((p) => p.slug === slug);
+
+if (!project) {
+  return Astro.redirect('/404');
+}
+---
+
+<Layout title={project.title}>
+  <article>
+    <h1>{project.title}</h1>
+    <p class="description">{project.description}</p>
+
+    <div class="content">
+      <project.Content />
+    </div>
+
+    <div class="links">
+      <a href={project.github}>GitHub</a>
+      {project.demo && <a href={project.demo}>Demo</a>}
+    </div>
+  </article>
+</Layout>
