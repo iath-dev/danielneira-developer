@@ -14,9 +14,10 @@ export default defineConfig({
     },
   },
   integrations: [mdx()],
-  site: 'https://iath-dev.github.io',
-  base: '/portfolio',
-  trailingSlash: 'ignore',
+  output: 'static',
+  // site: 'https://iath-dev.github.io',
+  // base: '/portfolio',
+  // trailingSlash: 'ignore',
   // NOTA: Eliminamos el adaptador de node y la configuración de build
   // ya que GitHub Pages necesita archivos estáticos, no un servidor Node.js
 });
