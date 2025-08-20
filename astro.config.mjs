@@ -16,8 +16,8 @@ export default defineConfig({
     },
   },
   integrations: [mdx()],
-  site: 'https://iath-dev.github.io/portfolio/',
-  base: '/',
+  site: 'https://iath-dev.github.io',
+  base: '/portfolio',
   trailingSlash: 'ignore',
   build: {
     format: 'directory',
