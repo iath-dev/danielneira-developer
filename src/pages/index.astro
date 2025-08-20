@@ -7,8 +7,6 @@ import ProjectCard from '@/components/projects/project-card.astro';
 // const summary = await getData<Summary>('summary', 'summary');
 const summary = await fetchContent.summary();
 const projects = await fetchContent.projects();
-
-console.log({ projects });
 ---
 
 <Layout title="Welcome to Astro.">
