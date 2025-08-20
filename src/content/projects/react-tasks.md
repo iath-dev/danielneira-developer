@@ -6,7 +6,7 @@ github: https://github.com/iath-dev/task-manager-rpy
 # demo: https://iath-clima.netlify.app/
 created: 2025-07
 featured: true
-image: /public/images/react-sheet.png
+image: /images/react-sheet.png
 ---
 
 ## About

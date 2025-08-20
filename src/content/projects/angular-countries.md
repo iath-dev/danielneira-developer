@@ -6,7 +6,7 @@ github: https://github.com/iath-dev/04-country-app
 demo: https://country-angularapp.netlify.app/
 created: 2025-07
 featured: true
-image: /public/images/angular-sheet.png
+image: /images/angular-sheet.png
 ---
 
 ## About
