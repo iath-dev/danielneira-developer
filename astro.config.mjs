@@ -1,9 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-
 import mdx from '@astrojs/mdx';
-import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,11 +17,6 @@ export default defineConfig({
   site: 'https://iath-dev.github.io',
   base: '/portfolio',
   trailingSlash: 'ignore',
-  build: {
-    format: 'directory',
-  },
-  output: 'static',
-  adapter: node({
-    mode: 'standalone',
-  }),
+  // NOTA: Eliminamos el adaptador de node y la configuración de build
+  // ya que GitHub Pages necesita archivos estáticos, no un servidor Node.js
 });
