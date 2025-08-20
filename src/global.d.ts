@@ -8,8 +8,8 @@ declare namespace Portfolio {
     content: string;
     image?: string | null;
     technologies: string[];
-    github_url?: string;
-    demo_url?: string;
+    github?: string;
+    demo?: string;
     featured: boolean;
     published_at: string;
     metadata?: {

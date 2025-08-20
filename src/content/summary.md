@@ -1,0 +1,4 @@
+---
+title: "Professional Profile"
+summary: "I am a multimedia engineer with specialization in Information Security and Artificial Intelligence (Advanced English) I have experience performing Backend and Frontend development for web and mobile solutions, in addition to the integration of database management, microservices architectures, SOLID principles, unit testing - automated, Al integration. I have extensive knowledge in UX/UI, Cloud Computing, SCRUM agile methodologies. I handle technologies such as JavaScript, TypeScript, Python, C#, Dart, ReactJs, Next.js, NestJS and Node.js, .NET, Firebase, Vue.js, Angular, Flutter, REST APIs, SQL and NoSQL databases (MySQL, PostgreSQL, Firebase), Postman, Git. I am characterized by my focus on improving user experience, system efficiency and being a highly goal oriented, fast learner, team player."
+---
