@@ -2,6 +2,9 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
+import mdx from '@astrojs/mdx';
+import node from '@astrojs/node';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -12,4 +15,15 @@ export default defineConfig({
       theme: 'github-dark',
     },
   },
+  integrations: [mdx()],
+  site: 'https://danielneira-developer.github.io',
+  base: '/',
+  trailingSlash: 'ignore',
+  build: {
+    format: 'directory',
+  },
+  output: 'static',
+  adapter: node({
+    mode: 'standalone',
+  }),
 });

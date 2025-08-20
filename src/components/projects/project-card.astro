@@ -1,0 +1,46 @@
+---
+interface Props {
+  data: Portfolio.Project;
+}
+
+const {
+  data: { description, id, title, technologies },
+} = Astro.props;
+---
+
+<a
+  href={`/projects/${id}`}
+  class="group hover:border-secondary bg-base-100 card card-sm cursor-pointer rounded-lg border p-4 shadow-sm drop-shadow-2xl transition duration-300 hover:shadow-2xl lg:hover:scale-105"
+>
+  <div class="card-body">
+    <div class="card-title">
+      <div class="mb-2.5 flex w-full items-center gap-x-3.5">
+        <svg
+          class="group-hover:fill-secondary group-hover:-rotate-12"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8z"
+          ></path>
+        </svg>
+        <h1 class="group-hover:text-secondary w-full flex-1 truncate text-lg">
+          {title}
+        </h1>
+      </div>
+    </div>
+    <p class="text-md mb-4 line-clamp-3 h-16">{description}</p>
+    <div class="card-actions">
+      <div class="flex flex-wrap gap-1.5">
+        {
+          technologies.flatMap((tec) => (
+            <span class="badge badge-sm badge-soft">{tec}</span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</a>

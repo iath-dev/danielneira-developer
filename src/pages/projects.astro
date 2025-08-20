@@ -1,0 +1,18 @@
+---
+// src/pages/projects.astro
+import ProjectCard from '@/components/projects/project-card.astro';
+import Layout from '@/layouts/Layout.astro';
+import { fetchContent } from '@/services/data';
+
+const projects = await fetchContent.projects();
+---
+
+<Layout title="Mis Proyectos">
+  <section class="container mx-auto px-4 py-8">
+    <h1 class="mb-6 font-mono text-2xl">Proyectos Destacados</h1>
+
+    <div class="grid grid-cols-2 gap-3.5 md:grid-cols-3 lg:grid-cols-4">
+      {projects.map((project) => <ProjectCard data={project} />)}
+    </div>
+  </section>
+</Layout>

@@ -1,33 +1,24 @@
-# Astro Starter Kit: Minimal
+# My Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is my personal portfolio website, built with Astro.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## About
 
-## 🚀 Project Structure
+This project showcases my skills and experience as a full-stack developer. It is designed to be a living project, and I will be continuously updating it with new features and content.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Future Plans
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+I am planning to integrate this portfolio with a REST API to dynamically load project data and other content. This will allow me to easily manage my portfolio content without having to redeploy the entire site.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+To get started with this project, you will need to have Node.js and npm installed.
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+2. Install the dependencies: `npm install`
+3. Start the development server: `npm run dev`
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+## Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -37,7 +28,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

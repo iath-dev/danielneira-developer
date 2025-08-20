@@ -1,9 +1,53 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import Hero from '@/components/home/hero.astro';
+import { fetchContent } from '@/services/data';
+import ProjectCard from '@/components/projects/project-card.astro';
+
+// const summary = await getData<Summary>('summary', 'summary');
+const summary = await fetchContent.summary();
+const projects = await fetchContent.projects();
+
+console.log({ projects });
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <h1>Welcome to <span class="text-red-500">Astro</span></h1>
-  </main>
+  <Hero />
+  <section
+    class="container mx-auto flex flex-col items-center space-y-16 px-6 py-8"
+  >
+    <div
+      id="about"
+      class="flex items-center justify-center gap-8 max-lg:flex-col-reverse lg:items-start"
+    >
+      <div>
+        <p
+          class="text-accent text-shadow-2xs mb-4 font-mono text-xl font-medium tracking-tight"
+        >
+          About me
+        </p>
+        <p class="text-base-content flex-2 font-mono text-lg">
+          {summary.summary}
+        </p>
+      </div>
+      <img
+        src="/profile.jpeg"
+        alt="profile image"
+        class="mask-r-from-70% mask-b-from-3.5 aspect-square w-[min(24rem,100%)] flex-1 rounded-xl object-cover"
+      />
+    </div>
+    <div class="space-y-5">
+      <h1
+        class="text-accent text-shadow-2xs font-mono text-xl font-medium tracking-tight"
+      >
+        Projects
+      </h1>
+      <div class="grid grid-cols-2 gap-3.5 lg:grid-cols-3">
+        {projects.slice(0, 6).map((item) => <ProjectCard data={item} />)}
+      </div>
+      <a href="/projects" class="btn not-[hover]:btn-outline btn-md w-full"
+        >Show more</a
+      >
+    </div>
+  </section>
 </Layout>

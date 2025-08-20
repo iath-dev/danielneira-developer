@@ -6,17 +6,23 @@
     "start": "astro dev",
     "dev": "astro dev",
     "build": "astro build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@astrojs/mdx": "^4.3.4",
+    "@astrojs/node": "^9.4.2",
     "@tailwindcss/vite": "^4.1.12",
-    "astro": "^5.13.2"
+    "astro": "^5.13.2",
+    "daisyui": "^5.0.50"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
