@@ -6,7 +6,7 @@ github: https://github.com/iath-dev/angular-maps-app
 demo: https://angular-mapbox-maps.netlify.app/
 created: 2024-05
 featured: true
-image: /public/images/angular-sheet.png
+image: /images/angular-sheet.png
 ---
 
 ## About

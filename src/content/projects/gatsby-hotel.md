@@ -6,7 +6,7 @@ technologies: [React, TypeScript, Tailwindcss]
 demo: https://elastic-swartz-1dc04b.netlify.app/
 created: 2023-09
 featured: true
-image: /public/images/react-sheet.png
+image: /images/react-sheet.png
 ---
 
 ## About

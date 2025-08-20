@@ -6,7 +6,7 @@ technologies: [React, TypeScript, Tailwindcss]
 demo: https://iath-clima.netlify.app/
 created: 2025-04
 featured: true
-image: /public/images/react-sheet.png
+image: /images/react-sheet.png
 ---
 
 ## About
