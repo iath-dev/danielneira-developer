@@ -14,9 +14,9 @@ I am planning to integrate this portfolio with a REST API to dynamically load pr
 
 To get started with this project, you will need to have Node.js and npm installed.
 
-1.  Clone the repository: `git clone https://github.com/your-username/your-repo.git`
-2.  Install the dependencies: `npm install`
-3.  Start the development server: `npm run dev`
+1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
+2. Install the dependencies: `npm install`
+3. Start the development server: `npm run dev`
 
 ## Commands
 
