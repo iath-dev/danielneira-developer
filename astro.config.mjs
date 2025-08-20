@@ -16,7 +16,7 @@ export default defineConfig({
     },
   },
   integrations: [mdx()],
-  site: 'https://danielneira-developer.github.io',
+  site: 'https://danielneira-developer.github.io/portfolio/',
   base: '/',
   trailingSlash: 'ignore',
   build: {
