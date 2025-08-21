@@ -2,11 +2,11 @@
 title: React News
 description: A news aggregator application built with React that fetches and displays the latest news from various sources.
 technologies: [React, TypeScript, Tailwindcss]
-# github: https://github.com/iath-dev/angular-maps-app
+github: https://github.com/iath-dev/react-news
 demo: https://iath-noticias.netlify.app/
 created: 2025-04
 featured: true
-image: /images/react-sheet.png
+image: /images/projects/react-news-screenshot.jpeg
 ---
 
 ## About
