@@ -36,9 +36,11 @@ const {
     <div class="card-actions">
       <div class="flex flex-wrap gap-1.5">
         {
-          technologies.flatMap((tec) => (
-            <span class="badge badge-sm badge-soft">{tec}</span>
-          ))
+          technologies
+            .slice(0, 4)
+            .flatMap((tec) => (
+              <span class="badge badge-sm badge-soft">{tec}</span>
+            ))
         }
       </div>
     </div>

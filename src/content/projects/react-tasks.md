@@ -9,13 +9,15 @@ featured: true
 image: /images/react-sheet.png
 ---
 
-## About
+# Full-Stack Task Manager Application
 
-This project is a full-stack task management application that allows users to create, manage, and track their tasks. The front end is built with React and Tailwind CSS, providing a modern and responsive user interface. The back end is powered by FastAPI, a high-performance Python web framework, and uses a PostgreSQL database to store task data.
+This repository hosts a full-stack task management application, built with a FastAPI backend and a React frontend.
 
-### Features
+## Overview
 
-- **Create and Manage Tasks:** Users can easily create, update, and delete tasks.
-- **User Authentication:** The application includes user authentication to ensure that only authorized users can access their tasks.
-- **Team Collaboration:** The application is designed to support team collaboration, allowing users to assign tasks to team members and track their progress.
-- **Full-stack Architecture:** The project demonstrates a full-stack architecture, with a clear separation between the front-end and back-end components.
+This project is a comprehensive task management solution, designed to be run with Docker. It provides a robust backend API and a modern, user-friendly interface.
+
+- **Backend:** A powerful RESTful API built with FastAPI, providing endpoints for task and user management.
+- **Frontend:** A responsive and interactive user interface built with React and TypeScript.
+
+The entire application is containerized using Docker, allowing for easy setup and deployment.
