@@ -1,5 +1,5 @@
 ---
-title: Country AngularApp – SPA en Angular 19+
+title: Country AngularApp – SPA in Angular 19+
 description: An interactive single-page application built with Angular that allows users to explore countries around the world.
 technologies: [Angular, TypeScript, Tailwindcss]
 github: https://github.com/iath-dev/04-country-app
