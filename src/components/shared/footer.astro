@@ -1,3 +1,11 @@
-<footer class="container mx-auto flex items-center justify-end p-4">
-  Copyright © 2025 All rights Reserved
+---
+import SocialLinks from '@/components/shared/social-links.astro';
+import { fetchContent } from '@/services/data';
+
+const socialLinks = await fetchContent.socialLinks();
+---
+
+<footer class="container mx-auto flex items-center justify-between p-4">
+  <p>Copyright © 2025 All rights Reserved</p>
+  <SocialLinks socialLinks={socialLinks} />
 </footer>

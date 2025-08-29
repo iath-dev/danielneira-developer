@@ -3,10 +3,12 @@ import Layout from '@/layouts/Layout.astro';
 import Hero from '@/components/home/hero.astro';
 import { fetchContent } from '@/services/data';
 import ProjectCard from '@/components/projects/project-card.astro';
+import Skills from '@/components/home/skills.astro';
 
 // const summary = await getData<Summary>('summary', 'summary');
 const summary = await fetchContent.summary();
 const projects = await fetchContent.projects();
+const skills = await fetchContent.skills();
 ---
 
 <Layout title="Jesus Daniel Neira Lara - Fullstack/React/Python/AI">
@@ -16,14 +18,10 @@ const projects = await fetchContent.projects();
   >
     <div
       id="about"
-      class="flex items-center justify-center gap-8 max-lg:flex-col-reverse lg:items-start"
+      class="animate-appear flex items-center justify-center gap-8 max-lg:flex-col-reverse lg:items-start"
     >
       <div>
-        <p
-          class="text-accent mb-4 font-mono text-xl font-medium tracking-tight text-shadow-2xs"
-        >
-          About me
-        </p>
+        <h1 class="text-accent mb-4 text-3xl font-bold">About me</h1>
         <p class="text-base-content flex-2 font-mono text-lg">
           {summary.summary}
         </p>
@@ -34,12 +32,9 @@ const projects = await fetchContent.projects();
         class="aspect-square w-[min(24rem,100%)] flex-1 rounded-xl mask-r-from-70% mask-b-from-3.5 object-cover"
       />
     </div>
+    <Skills skills={skills} />
     <div class="space-y-5">
-      <h1
-        class="text-accent font-mono text-xl font-medium tracking-tight text-shadow-2xs"
-      >
-        Projects
-      </h1>
+      <h1 class="text-accent mb-4 text-3xl font-bold">Projects</h1>
       <div class="grid grid-cols-1 gap-3.5 md:grid-cols-2 lg:grid-cols-3">
         {projects.slice(0, 6).map((item) => <ProjectCard data={item} />)}
       </div>

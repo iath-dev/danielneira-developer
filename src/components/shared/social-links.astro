@@ -1,0 +1,28 @@
+---
+import type { SocialLink } from 'src/interfaces/SocialLink';
+
+interface Props {
+  socialLinks: SocialLink[];
+}
+
+const { socialLinks } = Astro.props;
+---
+
+<div class="flex justify-center gap-4">
+  {
+    socialLinks.map((link) => (
+      <a
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-ghost btn-square"
+      >
+        <img
+          src={`/icons/${link.icon}.svg`}
+          alt={link.name}
+          class="size-[1.5em] dark:invert"
+        />
+      </a>
+    ))
+  }
+</div>

@@ -1,6 +1,9 @@
 import { getEntry } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Summary } from 'src/interfaces/Summary';
+import type { Project } from 'src/interfaces/Project';
+import type { Skill } from 'src/interfaces/Skill';
+import type { SocialLink } from 'src/interfaces/SocialLink';
 
 /**
  * Obtiene los datos de una entrada específica de una colección de contenido.
@@ -10,7 +13,7 @@ import type { Summary } from 'src/interfaces/Summary';
  * @returns Los datos de la entrada de la colección.
  */
 export async function getData<T>(
-  collection: 'projects' | 'personal-data' | 'summary',
+  collection: 'projects' | 'personal-data' | 'summary' | 'skills' | 'social-links',
   slug: string
 ): Promise<T> {
   const entry = await getEntry(collection, slug);
@@ -37,7 +40,7 @@ export const fetchContent = {
       summary: frontmatter.summary,
     }))[0];
   },
-  projects: async (): Promise<Portfolio.Project[]> => {
+  projects: async (): Promise<Project[]> => {
     // Implementación para desarrollo con Markdown
     const projects = await import.meta.glob<CollectionEntry<'projects'>>(
       '../content/projects/*.md',
@@ -63,5 +66,21 @@ export const fetchContent = {
       .sort(
         (a, b) => new Date(b.created).getTime() - new Date(a.created).getTime()
       );
+  },
+  skills: async (): Promise<Skill[]> => {
+    const skills = await import.meta.glob<CollectionEntry<'skills'>>(
+      '../content/skills.md',
+      { eager: true }
+    );
+
+    return Object.values(skills).map(({ frontmatter }) => frontmatter.skills)[0];
+  },
+  socialLinks: async (): Promise<SocialLink[]> => {
+    const socialLinks = await import.meta.glob<CollectionEntry<'social-links'>>(
+      '../content/social-links.md',
+      { eager: true }
+    );
+
+    return Object.values(socialLinks).map(({ frontmatter }) => frontmatter.social_links)[0];
   },
 };

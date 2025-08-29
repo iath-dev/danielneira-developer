@@ -15,7 +15,8 @@
     "@astrojs/mdx": "^4.3.4",
     "@tailwindcss/vite": "^4.1.12",
     "astro": "^5.13.2",
-    "daisyui": "^5.0.50"
+    "daisyui": "^5.0.50",
+    "preact": "^10.27.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",

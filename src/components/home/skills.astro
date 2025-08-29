@@ -1,0 +1,76 @@
+---
+import type { Skill } from 'src/interfaces/Skill';
+
+interface Props {
+  skills: Skill[];
+}
+
+const { skills } = Astro.props;
+---
+
+<div class="animate-appear w-full space-y-5">
+  <h1 class="text-accent mb-4 text-3xl font-bold">Skills</h1>
+  <div class="wrapper">
+    <div class="track">
+      {
+        skills.map((skill, i) => (
+          <div
+            style={{ '--i': i, '--l': skills.length }}
+            class="item flex items-center justify-center gap-3.5"
+          >
+            <img
+              src={`/icons/${skill.icon}.svg`}
+              alt={skill.name}
+              class="size-[2.5em] drop-shadow-2xl dark:invert"
+            />
+            <span class="font-mono text-sm">{skill.name}</span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .wrapper {
+    width: 90%;
+    margin-inline: auto;
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    margin-top: 5rem;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+  }
+
+  .item {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 100px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>
